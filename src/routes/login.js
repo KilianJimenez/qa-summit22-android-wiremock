@@ -9,11 +9,11 @@ router.post('/login', (req, res) => {
 
     if(req.body.usermail == "kilian.jimenez@apiumhub.com" && req.body.password == "h4rdP4$$")
 
-        res.json({"responseCode":200, "description": "Successful login !"});
+        res.status(200).json({"message":"Success", "description": "Successful login."});
 
     else
 
-        res.json({"responseCode":403, "description": "Unauthorized !"});
+        res.status(403).json({"message": "Unauthorized", "description": "Invalid password for the specified user or user account doesn't exists."});
 
 });
 
